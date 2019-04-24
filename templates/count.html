@@ -1,0 +1,13 @@
+<h1>Your Paragraph content {{count}} word!</h1>
+
+<a href="{% url 'home' %}">Start Again</a>
+<a href="{% url 'about' %}">About</a>
+<br/>
+{{ fulltext }}
+
+<h1>Word Dictionary:</h1>
+<br/>
+
+{% for word, totalword in worddictionary %}
+	<p> {{ word }} - {{ totalword }} </p>
+{% endfor %}
